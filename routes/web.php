@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArrayController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,15 @@ Route::get('/blog', function () {
     ]);
 });
 
+
+
+Route::get('/latihan', function () {
+    return view('latihan');
+});
+
+
+
+Route::get('training',[LatihanController::class,'index']);
+
+
+Route::get('/array', [ArrayController::class,'array']);
